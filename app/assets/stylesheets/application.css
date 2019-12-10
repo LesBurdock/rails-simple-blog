@@ -13,3 +13,73 @@
  *= require_tree .
  *= require_self
  */
+ .body{
+  color: white;
+  font-family: Roboto;
+ }
+
+ .btn{
+  color:white;
+  border: 1px solid white;
+ }
+
+ .card-img{
+ background-position: center center;
+ overflow: hidden;
+ height: 100%;
+}
+
+@media (min-width: 700px) {
+  .card_container{
+    display: grid;
+    position:relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr ;
+
+    grid-gap: 10px;
+    border: none;
+  }
+  [id="1"]{
+    grid-column: 1/ span 2;
+    grid-row: 1/span 2;
+  }
+
+  [id="6"]{
+    grid-column: 5/ span 1;
+    grid-row: 1/span 1;
+  }
+
+  [id="6"]{
+    grid-column: 3/ span 1;
+    grid-row: 1/span 1;
+    background-color: #C2B0C9;
+  }
+}
+
+@media (max-width: 600px) {
+  .card_container{
+    display: grid;
+    position:relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr ;
+    grid-gap: 10px;
+    border: none;
+  }
+
+  [id="1"]{
+    grid-column: 1/ span 1;
+    grid-row: 1/span 1;
+  }
+
+  [id="6"]{
+    grid-column: 2/ span 1;
+    grid-row: 1/span 1;
+  }
+
+  [id="6"]{
+    grid-column: 3/ span 1;
+    grid-row: 1/span 1;
+    background-color: #C2B0C9;
+  }
+}
+

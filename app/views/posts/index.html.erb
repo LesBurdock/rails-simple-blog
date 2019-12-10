@@ -1,0 +1,13 @@
+<h3>Blog Posts</h3>
+<div class="card_container">
+<% @posts.each do |post| %>
+  <div class="card bg-dark text-white" id=<%= post.id%>>
+    <img class="card-img" src=<%= post.url%> />
+    <div class="card-img-overlay">
+    <h3 class="card-title"><%= post.title %></h3>
+    <!-- <p class="card-text"><small class="text-muted"><%= post.category %></small></p>
+    <p><%= post.body %></p> -->
+    <%= link_to "Read More", post_path(post), :class =>"btn btn-outline-secondary" %>
+  </div>
+</div>
+<% end %>

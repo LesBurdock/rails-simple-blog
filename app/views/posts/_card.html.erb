@@ -1,0 +1,14 @@
+<div class = 'card' >
+  <%= image_tag @post.url%>
+  <div class = "card-category"><%= @post.category%></div>
+  <div class = "card-description">
+    <h2><%= @post.title %></h2>
+    <p><%= @post.body %></p>
+  </div>
+  <hr>
+    <%= link_to "Edit", edit_post_path(@post), :class =>'btn btn-primary'%>
+    <%= link_to "Delete", post_path(@post),
+    method: :delete,
+    data: {confirm: "This is permanent..."},:class =>'btn btn-danger'%>
+  </div>
+</div>
